@@ -1,0 +1,8 @@
+# Downloaded CLIs (keep bin/prega-release-notes tracked)
+bin/oc
+bin/opm
+bin/kubectl
+bin/openshift-install
+bin/oc-mirror
+bin/downloads/
+.work/

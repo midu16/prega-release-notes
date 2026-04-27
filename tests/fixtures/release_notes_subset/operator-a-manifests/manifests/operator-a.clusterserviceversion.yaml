@@ -1,0 +1,15 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  name: operator-a.v1.1.0
+  annotations:
+    containerImage: quay.io/example/operator-a@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+spec:
+  displayName: Operator A Display
+  version: 1.1.0
+  description: |
+    <p>Release <strong>highlights</strong> for operator-a.</p>
+  containerImage: quay.io/example/operator-a@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+  relatedImages:
+    - name: helper
+      image: quay.io/example/helper:1.0
