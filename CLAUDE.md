@@ -50,6 +50,13 @@ OCP_VERSION=4.20 python3 scripts/bootstrap_clients.py
 # Or let the CLI auto-install when --auto-install-clients is passed
 ```
 
+### Claude Code marketplace
+
+- **Catalog:** [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) (marketplace id: `midu16-prega`)
+- **Plugin directory:** [`plugins/prega-release-notes/`](plugins/prega-release-notes/) — vendored copy of commands, skills, `scripts/`, `bin/`, `requirements.txt`
+- **Refresh after edits:** `python3 scripts/sync_claude_plugin.py`
+- **User install:** `claude plugin marketplace add midu16/prega-release-notes` then `claude plugin install prega-release-notes@midu16-prega` ([docs](https://code.claude.com/docs/en/plugin-marketplaces))
+
 ## Architecture
 
 ### Core modules

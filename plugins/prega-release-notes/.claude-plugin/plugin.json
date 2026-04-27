@@ -1,0 +1,15 @@
+{
+  "name": "prega-release-notes",
+  "description": "OLM subset catalog release notes (opm render, oc extract, CSV Markdown), Python client bootstrap, and OpenShift download guidance",
+  "author": {
+    "name": "midu16"
+  },
+  "repository": "https://github.com/midu16/prega-release-notes",
+  "homepage": "https://github.com/midu16/prega-release-notes",
+  "keywords": ["openshift", "olm", "opm", "oc", "operators", "release-notes"],
+  "commands": ["./commands"],
+  "skills": [
+    "./skills/subset-release-notes",
+    "./skills/openshift-client-download"
+  ]
+}

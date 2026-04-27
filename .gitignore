@@ -5,4 +5,11 @@ bin/kubectl
 bin/openshift-install
 bin/oc-mirror
 bin/downloads/
+# Same CLI drops if bootstrap is run from the Claude plugin copy
+plugins/prega-release-notes/bin/oc
+plugins/prega-release-notes/bin/opm
+plugins/prega-release-notes/bin/kubectl
+plugins/prega-release-notes/bin/openshift-install
+plugins/prega-release-notes/bin/oc-mirror
+plugins/prega-release-notes/bin/downloads/
 .work/

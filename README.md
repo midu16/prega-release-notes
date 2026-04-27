@@ -53,6 +53,29 @@ pip install -r requirements.txt
 python3 -m unittest tests.test_release_notes_subset -v
 ```
 
+## Claude Code marketplace (install via `/plugin`)
+
+This repo ships a **plugin marketplace** at [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) (see [Claude Code: Create and distribute a plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces)).
+
+1. Add the marketplace (GitHub shorthand; uses the default branch):
+   ```bash
+   claude plugin marketplace add midu16/prega-release-notes
+   ```
+   Or in the Claude Code UI: register the Git repo so the checkout contains **`.claude-plugin/marketplace.json`** at the repository root (that path is what Claude resolves; the earlier “marketplace file not found” error means that file was missing or the URL pointed at the wrong tree).
+
+2. Install the plugin (marketplace name **`midu16-prega`**):
+   ```bash
+   claude plugin install prega-release-notes@midu16-prega
+   ```
+
+3. In sessions, run Bash/CLI steps from **`${CLAUDE_PLUGIN_ROOT}`** (plugin install root with `bin/`, `scripts/`, and `requirements.txt`).
+
+After changing root `.claude/commands` or `.cursor/skills`, refresh the vendored plugin tree before committing:
+
+```bash
+python3 scripts/sync_claude_plugin.py
+```
+
 ## Cursor skills and Claude commands
 
 | Purpose | Path |
@@ -61,6 +84,8 @@ python3 -m unittest tests.test_release_notes_subset -v
 | OpenShift client download (full catalog) | `.cursor/skills/openshift-client-download/SKILL.md` |
 | Slash: subset notes | `.claude/commands/subset-release-notes.md` |
 | Slash: download clients | `.claude/commands/download-clients.md` |
+| Marketplace catalog | `.claude-plugin/marketplace.json` |
+| Plugin payload (synced) | `plugins/prega-release-notes/` |
 
 Copy into another repo’s `.cursor/skills/` and `.claude/commands/`, or open **prega-release-notes** as the workspace root.
 

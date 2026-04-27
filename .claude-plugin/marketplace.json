@@ -1,0 +1,18 @@
+{
+  "name": "midu16-prega",
+  "owner": {
+    "name": "midu16"
+  },
+  "metadata": {
+    "description": "preGA OLM subset release notes: opm/oc, bootstrap clients, GitHub + Jira correlation"
+  },
+  "plugins": [
+    {
+      "name": "prega-release-notes",
+      "source": "./plugins/prega-release-notes",
+      "description": "Markdown release notes from a catalog index subset; native Python oc/opm bootstrap; optional merged PRs and Jira links",
+      "repository": "https://github.com/midu16/prega-release-notes",
+      "homepage": "https://github.com/midu16/prega-release-notes"
+    }
+  ]
+}
