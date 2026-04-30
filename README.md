@@ -2,6 +2,13 @@
 
 Standalone tooling to generate **Markdown release notes for a subset of OLM packages** from a single catalog index image: `opm render` → resolve head bundles on the default channel → `oc image extract` → read `ClusterServiceVersion` manifests. The CLI accepts **NDJSON or formatted JSON** from `opm` (no `jq` pipeline). If `oc image extract --path /manifests:.` yields no CSV, it **retries with a full image root** extract and discovers the CSV under the tree. Optional **`--include-github-prs`** adds the operator’s GitHub repo (from CSV annotations) and recent **merged** PRs for manual correlation with bundle version and OCI image lines.
 
+
+> [!CAUTION]
+> Unless specified otherwise, everything contained in this repository is unsupported by Red Hat.
+
+
+Use it. Break it. Improve it.
+
 ## Demo video
 
 [![prega-release-notes — demo walkthrough (YouTube)](https://img.youtube.com/vi/ibwXh71U-TQ/hqdefault.jpg)](https://www.youtube.com/watch?v=ibwXh71U-TQ)
