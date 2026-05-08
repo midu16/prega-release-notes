@@ -1,0 +1,11 @@
+# CODEOWNERS — https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# Contact: midu@redhat.com (Midu / @midu16 on GitHub)
+#
+# Assignment lines must use GitHub handles or org teams (e.g. @org/team), not raw
+# email addresses. Enable branch protection "Require review from Code Owners" if
+# you want these assignments to gate merges.
+#
+# Last matching pattern wins when multiple lines apply.
+
+* @midu16
